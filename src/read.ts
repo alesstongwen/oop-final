@@ -34,7 +34,7 @@ class Map {
       cityData.households.forEach((household) => {
         household.inhabitants.forEach((person) => {
           if (!person.isVaccinated && person.age >= this.currentIntake) {
-            const nearestClinic = this.findNearestClinic(
+            const nearestClinic = this.printDetail(
               cityData.clinics,
               household.blockNum
             );
@@ -48,7 +48,7 @@ class Map {
     });
   }
 
-  findNearestClinic(
+  printDetail(
     clinics: Clinic[],
     householdBlockNum: number
   ): Clinic | undefined {

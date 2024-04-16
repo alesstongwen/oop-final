@@ -1,3 +1,4 @@
+import ReportMaker from "./src/report";
 async function main() {
   const map = new Map("data.json");
   map.printMap();

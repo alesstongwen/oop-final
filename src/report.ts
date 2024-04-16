@@ -13,8 +13,8 @@ class SimpleReport implements IReport {
 
   printDetails() {
     const clinics = this.map.getClinics();
-    clinics.forEach((clinic) => {
-      console.log(`${clinic.name} - People In Lineup: ${clinic.size()}`);
+    clinics.forEach((clinic: Clinic) => {
+      console.log(`${clinic.name} have ${clinic.size()} in the line now`);
     });
   }
 }
@@ -49,3 +49,4 @@ class ReportMaker {
     this.report.printDetails();
   }
 }
+export default ReportMaker;
